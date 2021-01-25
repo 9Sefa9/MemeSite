@@ -3,8 +3,10 @@
 and a little bit CSS. Any contribution are welcome.
 
 ## Available Scripts
-
-In the project directory, you can run:
+First, run 
+### `npm install`
+to download the node_modules and dependencies.
+After that in the project directory, you can run:
 
 ### `yarn start` or 
 ### `npm start`
