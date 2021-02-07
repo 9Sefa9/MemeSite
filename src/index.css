@@ -1,17 +1,47 @@
-html{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin:0;
-  text-align:center;
+  margin: 0;
+  text-align: center;
 }
-ul{
+ul {
   list-style: none;
 }
-h1{
-  padding-top:5%;
+h1 {
+  content: none;
+  margin-left: 2rem;
+  position: relative;
+  font-size: 14vw;
+  color: rgba(220, 20, 60, 0);
+  -webkit-text-stroke: 0.3vw rgb(243, 137, 67);
+  text-transform: uppercase;
+}
+h1::before {
+  /*The attr() function returns the value of an attribute of the selected elements. attr(attribute-name)*/
+  content: "MEMESITE";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: rgb(255, 74, 42);
+  -webkit-text-stroke: 0vw crimson;
+  border-right: 3px solid palevioletred;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
 }
 
-
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
