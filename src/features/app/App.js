@@ -1,5 +1,4 @@
-import './App.css';
-import Memes from './Memes'
+import Memes from '../memes/Memes'
 function App() {
   return (
     <div className="App">

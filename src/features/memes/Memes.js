@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 function Memes() {
     const [state,setState] = useState({fetchedMemes:[]});
     useEffect(()=>{
-        async function getMemes(){
+        (async function getMemes(){
             try{
                 let m = await fetch('https://api.imgflip.com/get_memes');
                 let d = await m.json();
@@ -11,8 +11,8 @@ function Memes() {
             }catch(err){
                 console.log('error!:',err);
             }
-        }
-        getMemes();
+        })();
+        
     },[]);
 
     return (
