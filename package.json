@@ -3,15 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^13.2.1",
+    "@reduxjs/toolkit": "^1.6.2",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-fix-it": "^0.3.3",
-    "react-scripts": "4.0.3",
-    "redux": "^4.1.2",
-    "web-vitals": "^2.1.0"
+    "react-redux": "^7.2.6",
+    "react-scripts": "4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,9 +19,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -36,9 +33,9 @@
       "last 1 safari version"
     ]
   },
-  "description": "",
+  "description": "MemeSite is a Website which offers 100+ Memes",
   "main": "index.js",
   "devDependencies": {},
-  "author": "",
-  "license": "ISC"
+  "author": "Sefa Gövercin",
+  "license": "MIT"
 }
