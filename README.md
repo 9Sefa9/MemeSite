@@ -1,5 +1,6 @@
 # MemeSite
-## MemeSite is a website where 100+ memes are fetched through an API. It was created during my free time using React JS 
+## MemeSite is a website where 100+ memes are fetched through an API. It was created during my free time using ReactJS + ReduxToolkit
+## Link: https://meme-site-app.herokuapp.com/
 and a little bit CSS. Any contribution are welcome.
 
 ## Available Scripts
