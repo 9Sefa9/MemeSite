@@ -22,7 +22,9 @@ h5 {
   box-shadow: 0px 5px 20px black;
   background-color: rgba(255, 255, 255, 0.212);
 }
-
+img{
+  box-shadow: 0px 5px 25px black;
+}
 h5::before {
   /*The attr() function returns the value of an attribute of the selected elements. attr(attribute-name)*/
   content: "MEMESITE";
