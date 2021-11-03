@@ -23,8 +23,11 @@ const memeSlice = createSlice({
         console.log("error!:", err);
       }
     },
+    fetchDone: (state) => {
+        state.loaded = true;
+    }
   },
 });
 export const getMemes = (state) => state.meme.value;
-export const { fetchMemes } = memeSlice.actions;
+export const { fetchMemes,fetchDone } = memeSlice.actions;
 export default memeSlice.reducer;
