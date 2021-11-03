@@ -6,20 +6,24 @@ html {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   text-align: center;
+  animation: animate-background 30s linear infinite;
 }
 ul {
   list-style: none;
 }
-h1 {
+h5 {
   content: none;
-  margin-left: 2rem;
+  margin-left: 0;
   position: relative;
-  font-size: 14vw;
+  font-size: 6vw;
   color: rgba(220, 20, 60, 0);
-  -webkit-text-stroke: 0.3vw rgb(243, 137, 67);
+  -webkit-text-stroke: 0.3vw rgb(67, 243, 220);
   text-transform: uppercase;
+  box-shadow: 0px 5px 20px black;
+  background-color: rgba(255, 255, 255, 0.212);
 }
-h1::before {
+
+h5::before {
   /*The attr() function returns the value of an attribute of the selected elements. attr(attribute-name)*/
   content: "MEMESITE";
   position: absolute;
@@ -27,14 +31,15 @@ h1::before {
   left: 0;
   width: 0;
   height: 100%;
-  color: rgb(255, 74, 42);
-  -webkit-text-stroke: 0vw crimson;
-  border-right: 3px solid palevioletred;
+  color: rgb(42, 255, 60);
+  -webkit-text-stroke: 0.1vw rgb(57, 20, 220);
+  border-right: 3px solid rgb(248, 84, 84);
   overflow: hidden;
-  animation: animate 6s linear infinite;
+  animation: animate-title 6s linear infinite;
+
 }
 
-@keyframes animate {
+@keyframes animate-title {
   0%,
   10%,
   100% {
@@ -43,5 +48,41 @@ h1::before {
   70%,
   90% {
     width: 100%;
+  }
+}
+
+@keyframes animate-background {
+  0% {
+    background-color: rgb(0, 255, 55);
+  }
+  10% {
+    background-color: rgb(0, 255, 55);
+  }
+  20% {
+    background-color: rgb(255, 0, 0);
+  }
+  30% {
+    background-color: rgb(17, 0, 255);
+  }
+  40% {
+    background-color: rgb(255, 208, 0);
+  }
+  50% {
+    background-color: rgb(255, 0, 234);
+  }
+  60% {
+    background-color: rgb(255, 0, 234);
+  }
+  70% {
+    background-color: rgb(255, 238, 0);
+  }
+  80% {
+    background-color: rgb(17, 0, 255);
+  }
+  90% {
+    background-color: rgb(255, 0, 0);
+  }
+  100%{
+    background-color: rgb(0, 255, 55);
   }
 }

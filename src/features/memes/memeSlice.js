@@ -13,21 +13,11 @@ const memeSlice = createSlice({
   name: "meme",
   initialState,
   reducers: {
-    fetchMemes: async (state) => {
-      try {
-        let m = await fetch("https://api.imgflip.com/get_memes");
-        let d = await m.json();
-        state.fetchedMemes = d.data.memes;
-        console.log(state.fetchedMemes);
-      } catch (err) {
-        console.log("error!:", err);
-      }
+    fetchDone: (state, action) => {
+      state.fetchedMemes = action.payload;
     },
-    fetchDone: (state) => {
-        state.loaded = true;
-    }
   },
 });
 export const getMemes = (state) => state.meme.value;
-export const { fetchMemes,fetchDone } = memeSlice.actions;
+export const { fetchDone } = memeSlice.actions;
 export default memeSlice.reducer;
