@@ -10,9 +10,9 @@ on component updates but only for the mounting of the component.
 */
 
 //Fetching Memes
-async function getMemes(){
+async function getMemes(url){
     try{
-        let m = await fetch('https://api.imgflip.com/get_memes');
+        let m = await fetch(url);
         let d = await m.json();
         return d.data.memes;
 
@@ -20,21 +20,17 @@ async function getMemes(){
         console.log('error!:',err);
     }
 }
-function Memes() {
+function Memes(props) {
 
     const [state,dispatch] = useReducer(memeSliceReducer,{fetchedMemes:[]});
     
     useEffect(()=>{
-        //console.log(getMemes());
-        //const memes = (async () =>{return await getMemes()})();
         (async () => {
-            const meme = await getMemes();
-            dispatch(fetchDone(meme)); 
            
-        })();
-           
-        
-    },[]);
+            const meme = await getMemes(props.url);
+            dispatch(fetchDone(meme));       
+        })();  
+    },[props.url]);
 
     return state.fetchedMemes ? (
         <ul className="meme-container">            

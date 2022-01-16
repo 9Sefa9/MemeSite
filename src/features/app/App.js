@@ -4,9 +4,10 @@ function App() {
     <div className="App">
       <h5>MEMESITE</h5>
       <h2>Less Talking - Download Your Desired Meme </h2>
-       <Memes /> 
+       <Memes url="https://api.imgflip.com/get_memes"/> 
     </div>
   );
 }
 
 export default App;
+  
